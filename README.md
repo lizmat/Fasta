@@ -8,8 +8,11 @@ SYNOPSIS
 
     use Fasta;
 
-    my %labels = Fasta.count-bases($file);
-    say %label{"Carsonella ruddii"};  # bag with frequencies
+    my %counts = Fasta.count-bases($file);
+    say %counts{"Carsonella ruddii"};     # bag with frequencies
+
+    my %sequences = Fasta.sequences($file);
+    say %sequences{"Carsonella ruddii"};  # sequence as string
 
 DESCRIPTION
 ===========
@@ -23,6 +26,14 @@ count-bases
     say %label{"Carsonella ruddii"};  # bag with frequencies
 
 Takes the name of a Fasta file, and creates a hash with labels encountered as keys, and a Bag with the nucleotide letters and their frequencies.
+
+sequences
+---------
+
+    my %sequences = Fasta.sequences($file);
+    say %sequences{"Carsonella ruddii"};  # sequence as string
+
+Takes the name of a Fasta file, and creates a hash with labels encountered as keys, and a string with the actual sequence.
 
 INSPIRATION
 ===========

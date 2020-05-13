@@ -2,5 +2,8 @@ Revision history for Fasta
 
 {{$NEXT}}
 
+0.0.2  2020-05-13T16:16:11+02:00
+    - Add method .sequences, to produce the sequences as strings
+
 0.0.1  2020-05-13T15:01:46+02:00
     - Initial version
