@@ -2,7 +2,7 @@ use v6.d;
 
 my @nucleotides = <A C G T>;
 
-class Fasta:ver<0.0.2>:auth<cpan:ELIZABETH> {
+class Fasta:ver<0.0.3>:auth<cpan:ELIZABETH> {
 
     multi method count-bases($file) {
         self.count-bases: $file, my %labels
@@ -14,25 +14,35 @@ class Fasta:ver<0.0.2>:auth<cpan:ELIZABETH> {
         return Failure.new("'$file' not readable") unless $io.r;
 
         # create the bags
-        my $current;
-        for $io.lines {
-            if .starts-with(">") {
-                $current := %labels{.substr(1)} := BagHash.new;
-            }
-            elsif $current.defined {
-                $current.add: .comb;
-            }
-            else {
-                $current := %labels{"NOLABEL"} := BagHash.new: .comb;
+        my str $label = "NOLABEL";
+        my int @counts;
+
+        sub finalize() {
+            if @counts {
+                %labels{$label} := @nucleotides.map( {
+                    $_ => @counts[.ord]
+                } ).Bag;
+                @counts = ();
             }
         }
 
-        # clean up garbage
-        for %labels.values -> $bag {
-            for $bag.keys -> $nucleotide {
-                $bag{$nucleotide} = 0 unless $nucleotide (elem) @nucleotides;
+        for $io.lines -> str $line {
+            use nqp;  # hot stuff, so we're going to cheat
+
+            if nqp::eqat($line,">",0) {
+                finalize;
+                $label = nqp::substr($line,1);
+            }
+            else {
+                my int $i     = -1;
+                my int $chars = nqp::chars($line);
+                nqp::while(
+                  nqp::islt_i(($i = nqp::add_i($i,1)),$chars),
+                  ++nqp::atposref_i(@counts,nqp::ordat($line,$i))
+                );
             }
         }
+        finalize;
 
         %labels
     }

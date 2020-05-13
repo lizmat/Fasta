@@ -2,6 +2,10 @@ Revision history for Fasta
 
 {{$NEXT}}
 
+0.0.3  2020-05-13T23:15:17+02:00
+    - Make .count-bases about 9.5x as fast by using native int arrays
+      for counting, and windowing over the string with nqp::ordat.
+
 0.0.2  2020-05-13T16:16:11+02:00
     - Add method .sequences, to produce the sequences as strings
 

@@ -11,7 +11,7 @@ sub check-bag(
     subtest "$description: check contents of bag" => {
         plan 6;
 
-        isa-ok bag, BagHash, "$description: did we get a BagHash";
+        isa-ok bag, Bag, "$description: did we get a Bag";
         is bag.elems, 4, "$description: number of nucleotides ok?";
         is bag<A>, $A, "$description: A nucleotides ok?";
         is bag<C>, $C, "$description: C nucleotides ok?";
