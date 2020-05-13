@@ -1,0 +1,22 @@
+{
+  "auth" : "cpan:ELIZABETH",
+  "authors" : [
+    "Elizabeth Mattijsen"
+  ],
+  "build-depends" : [ ],
+  "depends" : [ ],
+  "description" : "Library of FASTA related functionality",
+  "license" : "Artistic-2.0",
+  "name" : "Fasta",
+  "perl" : "6.c",
+  "provides" : {
+    "Fasta" : "lib/Fasta.pm6"
+  },
+  "resources" : [ ],
+  "source-url" : "https://github.com/lizmat/Fasta.git",
+  "tags" : [
+    "UTILS"
+  ],
+  "test-depends" : [ ],
+  "version" : "0.0.1"
+}
