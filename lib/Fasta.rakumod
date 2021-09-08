@@ -1,8 +1,8 @@
 use v6.d;
 
-my @nucleotides = <A C G T>;
+my constant @nucleotides = <A C G T>;
 
-class Fasta:ver<0.0.3>:auth<cpan:ELIZABETH> {
+class Fasta:ver<0.0.4>:auth<zef:lizmat> {
 
     multi method count-bases($file) {
         self.count-bases: $file, my %labels
@@ -123,18 +123,18 @@ Inspired by the Suman Khanal's:
 
 =head1 AUTHOR
 
-Elizabeth Mattijsen <liz@wenzperl.nl>
+Elizabeth Mattijsen <liz@raku.rocks>
 
 Source can be located at: https://github.com/lizmat/Fasta . Comments and
 Pull Requests are welcome.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2020 Elizabeth Mattijsen
+Copyright 2020, 2021 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under
 the Artistic License 2.0.
 
 =end pod
 
-# vim: ft=perl6 expandtab sw=4
+# vim: expandtab shiftwidth=4

@@ -1,22 +1,26 @@
 {
-  "auth" : "cpan:ELIZABETH",
-  "authors" : [
+  "auth": "zef:lizmat",
+  "authors": [
     "Elizabeth Mattijsen"
   ],
-  "build-depends" : [ ],
-  "depends" : [ ],
-  "description" : "Library of FASTA related functionality",
-  "license" : "Artistic-2.0",
-  "name" : "Fasta",
-  "perl" : "6.c",
-  "provides" : {
-    "Fasta" : "lib/Fasta.pm6"
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "Library of FASTA related functionality",
+  "license": "Artistic-2.0",
+  "name": "Fasta",
+  "perl": "6.c",
+  "provides": {
+    "Fasta": "lib/Fasta.rakumod"
   },
-  "resources" : [ ],
-  "source-url" : "https://github.com/lizmat/Fasta.git",
-  "tags" : [
+  "resources": [
+  ],
+  "source-url": "https://github.com/lizmat/Fasta.git",
+  "tags": [
     "UTILS"
   ],
-  "test-depends" : [ ],
-  "version" : "0.0.3"
+  "test-depends": [
+  ],
+  "version": "0.0.4"
 }

@@ -2,6 +2,12 @@ Revision history for Fasta
 
 {{$NEXT}}
 
+0.0.4  2021-09-08T15:05:04+02:00
+    - Change file extension to .rakumod
+    - Migrate to zef ecosystem
+    - Update email address
+    - Update copyright year
+
 0.0.3  2020-05-13T23:15:17+02:00
     - Make .count-bases about 9.5x as fast by using native int arrays
       for counting, and windowing over the string with nqp::ordat.

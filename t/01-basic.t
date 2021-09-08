@@ -71,3 +71,5 @@ check-sequence
   %sequences{'HSGLTH1 Human theta 1-globin gene'},
   "CCACTGCACTCACCGCACCCGGCCAATTTTTGTGT",
   "TGCTCTCTCGAGGTCAGGACGCGAGAGGAAGGCGC";
+
+# vim: expandtab shiftwidth=4
