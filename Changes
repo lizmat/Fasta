@@ -2,6 +2,12 @@ Revision history for Fasta
 
 {{$NEXT}}
 
+0.0.5  2024-06-24T21:05:24+02:00
+    - Modernize test file extension
+    - Modernize pod
+    - Add sponsor link and button
+    - Update copyright year
+
 0.0.4  2021-09-08T15:05:04+02:00
     - Change file extension to .rakumod
     - Migrate to zef ecosystem
