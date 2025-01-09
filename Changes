@@ -1,6 +1,8 @@
 Revision history for Fasta
 
 {{$NEXT}}
+    - Add CI badge for each OS
+    - Update copyright year
 
 0.0.5  2024-06-24T21:05:24+02:00
     - Modernize test file extension
